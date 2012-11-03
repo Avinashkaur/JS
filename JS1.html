@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <script>
+function check(value)
+{
+var obj=document.getElementsByClassName("chk");
+for(var i=0;i<obj.length;i++)
+  {
+    obj[i].checked=value;
+  }
+}
+
+    </script>
+   
+  </head>
+  
+  <body>
+   <h1>Javascript first exercise</h1>
+   
+    <input type="checkbox" name="red" class="chk"/>red <br>
+    <input type="checkbox" name="green" class="chk"/>green <br>
+    <input type="checkbox" name="yellow" class="chk"/>yellow <br>
+    <input type="checkbox" name="white" class="chk"/>white <br>
+    <input type="checkbox" name="black" class="chk"/>black <br><br>
+   
+    <a href="#" onclick="check(true)"/>check all<br>
+    <a href="#" onclick="check(false)"/>Uncheck All
+   
+   
+
+
+  </body>
+</html>
+ 
+    
+
