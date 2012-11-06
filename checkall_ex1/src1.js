@@ -1,8 +1,6 @@
-function check(value)
-{
-var colors = document.getElementsByClassName("color");
-for( var i = 0; i < colors.length; i++) 
-  {
-    colors[i].checked=value;
-  }
+function check(value) {
+    var i, colors = document.getElementsByClassName("color");
+    for (i = 0; i < colors.length; i++) {
+        colors[i].checked = value;
+    }
 }
