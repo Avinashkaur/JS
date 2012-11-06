@@ -12,16 +12,14 @@ function select_checkbox() {
     if (count > 3) {
         this.checked = false;
         count--;
-    		for (i = 0; i < days.length; i++) {
-	            if (days[i].checked) {
-			        txt = txt + " " + days[i].value;	
-		        }
-        
-            }
+    	for (i = 0; i < days.length; i++) {
+	        if (days[i].checked) {
+			    txt = txt + " " + days[i].value;	
+		    }
+        }
 		alert("you can select only 3 values.You have already selected:" + txt);
 		txt = "";
-        	
-	}
+    }
 	
 }
 
