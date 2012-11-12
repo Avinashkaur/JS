@@ -1,0 +1,48 @@
+<html>
+  <head>
+    
+  </head>
+  <body  onload = "hide_list()">
+    <div id = "container">
+      <ul type = "none">
+
+        <li><input type = "checkbox" onclick = "select_checkbox(this)" id = "color" />color
+          <ul class = "child_list" name ="color" type = "none">
+            <li><input type = "checkbox"  class = "color" />red</li><br />
+            <li><input type = "checkbox"  class = "color" />blue</li><br />
+            <li><input type = "checkbox"  class = "color" />white</li><br />
+            <li><input type = "checkbox"  class = "color" />green</li><br />
+          </ul>
+        </li><br />
+
+        <li><input type = "checkbox" onclick = "select_checkbox(this)" id = "movies" />movies 
+          <ul class = "child_list" name = "movies" type = "none">
+            <li><input type = "checkbox"  class = "movies" />dar</li><br />
+            <li><input type = "checkbox"  class = "movies"/>sir</li><br />
+          </ul>
+        </li><br />
+
+        <li><input type = "checkbox" onclick = "select_checkbox(this)" id = "drinks" />drinks
+           <ul class = "child_list" name = "drinks" type = "none">
+            <li><input type = "checkbox" class = "drinks" />pepsi</li><br />
+            <li><input type = "checkbox" class = "drinks"/>coke</li><br />
+            <li><input type = "checkbox" class = "drinks"/>dew</li><br />
+            </ul> 
+        </li><br />
+
+        <li><input type = "checkbox" onclick = "select_checkbox(this)" id = "bikes" />bikes 
+         <ul class = "child_list" name = "bikes" type = "none">
+            <li><input type = "checkbox" class = "bikes" />pulsar</li><br />
+            <li><input type = "checkbox" class = "bikes" />cbz</li><br />
+            <li><input type = "checkbox" class = "bikes"/>hero honda</li><br />
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+<script type = "text/javascript" src = "source4.js"></script>
+ 
+  </body>
+
+</html>

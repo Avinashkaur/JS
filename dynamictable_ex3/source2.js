@@ -1,8 +1,11 @@
+  var count = 1;
   function insert_row() {
     var dTable = document.getElementById("dataGrid");
-   // dTable.tBodies[0].appendChild(document.createElement('tr'));
-    var dLength = dTable.rows.length;
-    var dRow = dTable.insertRow(dLength);
+    var dRow = dTable.tBodies[0].appendChild(document.createElement('tr'));
+    count++;
+    dRow.setAttribute("id",count);
+    // var dLength = dTable.rows.length;
+    // var dRow = dTable.insertRow(dLength);
     var dCell0 = dRow.insertCell(0);
     var dCell1 = dRow.insertCell(1);
     var dCell2 = dRow.insertCell(2);
@@ -45,8 +48,14 @@
   
       dbutton.onclick = function delete_row() {
 
-        var del_row = this.parentNode.parentNode;
-        del_row.parentNode.removeChild(del_row);
+        // var del_row = this.parentNode.parentNode;
+        // del_row.parentNode.removeChild(del_row);
+
+        // var del_row = this.count;
+        //         dTable.deleteRow(del_row);
+
+          console.log(this.getAttribute(count));
+
         // dCell0.removeChild(dText1);
         // dCell1.removeChild(dText2);
         // dCell2.removeChild(dbutton);
@@ -56,7 +65,10 @@
         // dRow.removeChild(dCell1);
         // dRow.removeChild(dCell2);
         //dTable.removeChild(dRow);
+        
 
+
+          //dTable.deleteRow(del_value);
       }
 
       ebutton.onclick = function edit_row() {

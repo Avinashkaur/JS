@@ -1,0 +1,36 @@
+ 
+
+ function hide_list() {
+   var hidden_list = document.getElementsByClassName("child_list");
+   for (var i = 0; i<4; i++) {
+     hidden_list[i].style.display = "none";
+     
+   }
+   hidden_list.onload = container();
+ }
+
+ function container() {
+
+  var contains = document.getElementById("container");
+  contains.style.height = "100px";
+  contains.style.overflow = "auto";
+
+ }
+
+function select_checkbox(ide) {
+  var state = ide.checked;
+  var list_name = ide.getAttribute("id");
+  var list = document.getElementsByName(list_name);
+  var children = document.getElementsByClassName(list_name);
+  ide.scrollIntoView(true);
+  
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.display = (list[i].style.display == "none") ? "block" : "none";
+  }
+  for (var i = 0; i < children.length; i++) {
+    children[i].checked = ide.checked;
+  }
+ 
+}
+
+
