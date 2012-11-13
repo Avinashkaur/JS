@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link href = "style.css" type = "text/css" rel = "stylesheet" />
+    <script type = "text/javascript" src = "source5.js"></script>
+  </head>
+  <body onload = "initial()">
+
+    <div id = "container">
+      <form action = "" accept-charset = "utf-8">
+
+        <label id = "header">Registration Form</label>
+        <dl>
+          <dt>Login Name:</dt>
+          <dd ><input type ="text" class = "input" name= "loginname"/></dd>
+          <dt>Email:</dt>
+          <dd><input type = "text" class = "input1" name = "emailid" onchange = "valid_email()" /></dd>
+          <dt>Name:</dt>
+          <dd><input type = "text" class = "input1" name="username"/></dd>
+          <dt>Timezone:</dt>
+          <dd><select id = "select_box"><option>GMT</option><option></option></select></dd>
+          <dt>Home Page:</dt>
+          <dd><input type = "text" class = "input" name = "homepage"/></dd>
+          <dt>About Me</dt><br />
+          <dd><textarea rows = "10" cols = "70" name = "tArea" onchange = "check_text()"></textarea></dd>
+        </dl>
+        
+        <input type = "checkbox" id = "notify" onclick = "enable_button(this)" /><label id="l1">Receive notification of comments.</label><br /><br />
+        <label id= "l2">You will be sent an email when someone posts comments to your blog or Album.</label>
+        <br />
+        <label id= "l3"> Your password will be mailed to you.</label>
+        <br />
+        <input type = "button" value = "GO" name = "button1" id = "button1" onclick = "validation()" />
+      </form>
+    </div>
+  </body>
+</html>
+

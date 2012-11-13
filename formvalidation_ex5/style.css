@@ -1,0 +1,72 @@
+/*CSS */
+
+#container {
+  margin: 0px auto;
+  width: 600px;
+  background-color: #98FB98;
+  
+}
+#header {
+  background-color: #9ACD32; 
+  font: 16px Tahoma;
+  /*margin:0px auto;*/
+  color:#ffffff;
+  text-align: center;
+  padding:2px 226px;  
+}
+dl dt {
+  float:left;
+  font: 12px Tahoma;
+  width:110px;
+  margin-left:10px;
+  padding-right:20px;
+}
+dl dd
+{
+  float:left
+  padding-right:20px; 
+  margin: 3px 10px;
+}
+.input {
+  
+  width:360px;
+  border:solid 1px #9ACD32;
+  position:relative;
+  /*margin: 4px 0px;*/
+}
+.input1 {
+  width:360px;
+  border:solid 1px #9ACD32;
+  position:relative;
+  background-color: yellow;
+
+}
+#select_box {
+  width:100px;
+  border:solid 1px #9ACD32;
+}
+#notify {
+  float:left;
+  font: 12px Tahoma;
+  margin-left:10px;
+}
+#l1 {
+  font:12px Tahoma;
+}
+#l2 {
+  font:10px Tahoma;
+  padding-top: :10px;
+  float:left;
+}
+#l3 {
+  font:11px Tahoma;
+  text-align: center;
+  width:200px;
+  margin-left:100px;
+}
+#button1 {
+  margin: 10px;
+  background-color: #9ACD32;
+  color:white;
+}
+
