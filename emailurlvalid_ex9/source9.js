@@ -50,7 +50,7 @@ function valid_url() {
   var oForm = document.forms[0];
   var url = oForm.homepage.value;
  // var url = document.getElementById("url").value;
-  var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  var pattern = /(ftp|http|https|gopher):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   if (!(pattern.test(url))) {
     alert("Url is not valid");
     return false;
