@@ -3,7 +3,7 @@ function initial() {
   var textfield2 = document.getElementById("text2");
     
   textfield1.onchange = function() {
-    var pattern = /^\d+(\.\d+)?$/;
+    var pattern = /^(\-?\d+)(\.\d+)?$/;
     if (pattern.test(textfield1.value)) {
       textfield2.value = "true";
       //button.disabled = false;
@@ -18,7 +18,7 @@ function validate() {
   var myForm = document.forms[0];
   var textfield1 = document.getElementById("text1");
   var textfield2 = document.getElementById("text2");
-  var pattern = /^\d+(\.\d+)?$/;
+  var pattern = /^(\-?\d+)(\.\d+)?$/;
 
   if (pattern.test(textfield1.value)) {
       // textfield2.value = "true";
