@@ -35,8 +35,9 @@
 // }
 function alter(listbox1,listbox2) {
   //console.log(listbox1.id);
-  for (var i = 0; i < listbox1.length; i++) {
-    item = listbox1.options[i];
+  
+  for (var i = listbox1.length-1; i >= 0; i--) {
+    var item = listbox1.options[i];
     if(item.selected) {
       newOption = document.createElement('option');
       newOptionText = document.createTextNode(item.value);
@@ -47,52 +48,3 @@ function alter(listbox1,listbox2) {
     }
   }
 }
-// function alter(id) {
-//  // console.log(id.name);
-//   var fListbox = document.getElementById('select1');
-//   var sListbox = document.getElementById('select2');
-//   var addButton = document.getElementById('add');
-//   var newOption,newOptionText,item;
-//   //var arr = "";
-//   //var newOptions = new Array();
-//   for (var i=0; i < id.options.length; i++) {
-//     item = id.options[i];
-//     if (item.selected) {
-//       newOption = document.createElement('option');
-//       newOptionText = document.createTextNode(item.value);
-//       newOption.setAttribute("value", item.value);
-//       newOption.appendChild(newOptionText);
-//       //newOptions.push(newOption);
-//     }
-//   }
-  
-//   addButton.onclick = function() {
-//     // for (var i = 0; i < arr.length; i++) {
-//     //   newOption = document.createElement('option');
-//     //   newOptionText = document.createTextNode(arr[i].value);
-//     //   newOption.setAttribute("value", arr[i].value);
-//     //   newOption.appendChild(newOptionText);
-//      sListbox.appendChild(newOption);
-
-//     // }
-//   }
-// }
-
-
-
-
-//       newOption = document.createElement('option');
-//       newOptionText = document.createTextNode(item.value);
-//       newOption.setAttribute("value", item.value);
-//       newOption.appendChild(newOptionText);
-
-//       if(id.name == "list1") {
-//         sListbox.appendChild(newOption);
-//       }
-//       else if (id.name == "list2") {
-//         fListbox.appendChild(newOption)
-//       }
-//       id.remove(id.selectedIndex);
-//     }
-//   }
-// }

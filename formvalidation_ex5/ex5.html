@@ -6,7 +6,7 @@
   <body onload = "initial()">
 
     <div id = "container">
-      <form action = "" accept-charset = "utf-8">
+      <form accept-charset = "utf-8" onsubmit = "return validation()">
 
         <label id = "header">Registration Form</label>
         <dl>
@@ -29,7 +29,7 @@
         <br />
         <label id= "l3"> Your password will be mailed to you.</label>
         <br />
-        <input type = "button" value = "GO" name = "button1" id = "button1" onclick = "validation()" />
+        <input type = "submit" value = "GO" name = "button1" id = "button1" />
       </form>
     </div>
   </body>
