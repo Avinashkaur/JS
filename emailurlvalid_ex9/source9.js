@@ -54,6 +54,7 @@ function valid_email() {
     myForm.emailid.value = "";
   }
 }
+
 function enable_button(chk_box) {
   var goButton = document.getElementById("button1");
   if(chk_box.checked == true) {
@@ -70,7 +71,7 @@ function valid_url() {
   var myForm= document.forms[0];
   var url = myForm.homepage.value;
  // var url = document.getElementById("url").value;
-  var pattern = /((ftp|http|https|gopher):\/\/)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  var pattern = /(ftp|http|https|gopher)?:\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   if (!(pattern.test(url))) {
     alert("Url is not valid");
     return false;

@@ -1,14 +1,14 @@
 
 function initial() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   var goButton = myForm.button1;
   goButton.disabled = true;
   myForm.loginname.focus();
 }
 function validation() {
-  var myForm = document.forms[0];
-  for (var i = 0; i < document.forms[0].elements.length; i++) {
-    var selected_field = document.forms[0].elements[i];
+  var myForm = document.getElementById('form1');
+  for (var i = 0; i < myForm.elements.length; i++) {
+    var selected_field = myForm.elements[i];
     if (selected_field.type == "text") {
       // console.log(selected_field.name);
       if ((selected_field.value == "") || (selected_field.value == null)) {
@@ -34,7 +34,7 @@ function validation() {
   //myForm.submit();
 }
 function check_text() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   var form_textarea = myForm.tArea;
   var minLength = form_textarea.value.length;
   if (minLength < 50) {
@@ -45,7 +45,7 @@ function check_text() {
 
 //validating email address
 function valid_email() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   var emailadd = myForm.emailid.value;
   var atpos = emailadd.indexOf('@');
   var dotpos = emailadd.lastIndexOf('.');
