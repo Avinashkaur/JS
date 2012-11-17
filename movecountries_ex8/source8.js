@@ -1,50 +1,9 @@
-// function initial() {
-//   var addButton = document.getElementById('add');
-//   var remButton = document.getElementById('remove');
-//   var fListbox = document.getElementById('select1');
-//   var sListbox = document.getElementById('select2');
-//   var newOption,newOptionText,item;
-//   addButton.onclick = function () {
-//     for (var i=0; i < fListbox.options.length; i++) {
-//       item = fListbox.options[i];
-//       if(item.selected) {
-//         newOption = document.createElement('option');
-//         newOptionText = document.createTextNode(item.value);
-//         newOption.setAttribute("value", item.value);
-//         newOption.appendChild(newOptionText);
-//         sListbox.appendChild(newOption);
-//         //console.log(fListbox.selectedIndex);
-//         fListbox.remove(fListbox.selectedIndex);
-//       }
-//     }
-//   }
-
-//   remButton.onclick = function () {
-//     for (var i=0; i < sListbox.options.length; i++) {
-//       item = sListbox.options[i];
-//       if (item.selected) {
-//         newOption = document.createElement('option');
-//         newOptionText = document.createTextNode(item.value);
-//         newOption.setAttribute("value", item.value);
-//         newOption.appendChild(newOptionText);
-//         fListbox.appendChild(newOption);
-//         sListbox.remove(sListbox.selectedIndex);
-//       }
-//     }
-//   }
-// }
 function alter(listbox1,listbox2) {
-  //console.log(listbox1.id);
-  
-  for (var i = listbox1.length-1; i >= 0; i--) {
-    var item = listbox1.options[i];
-    if(item.selected) {
-      newOption = document.createElement('option');
-      newOptionText = document.createTextNode(item.value);
-      newOption.setAttribute("value", item.value);
-      newOption.appendChild(newOptionText);
-      listbox2.appendChild(newOption);
-      listbox1.remove(listbox1.selectedIndex);
-    }
+  while (listbox1.selectedIndex) {
+    var newoption = listbox1.options[listbox1.selectedIndex];
+    listbox2.options.add(newoption);
   }
 }
+
+  
+ 
