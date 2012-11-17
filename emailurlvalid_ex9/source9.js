@@ -1,11 +1,11 @@
 function initial() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   var goButton = myForm.button1;
   goButton.disabled = true;
   myForm.loginname.focus();
 }
 function validation() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   for (var i = 0; i < document.forms[0].elements.length; i++) {
     var selected_field = document.forms[0].elements[i];
     if (selected_field.type == "text") {
@@ -26,14 +26,30 @@ function validation() {
     alert("You cannot enter text less than 50 characters");
     form_textarea.focus();
     return false;
-
-   
   }
   //return false;
   //myForm.submit();
+var emailadd = myForm.emailid.value;
+var pattern = /^(?:\w+\.?)*\w+@(?:\w+\.?)*\w+$/;
+  if (!(pattern.test(emailadd))) {
+    alert("Not a valid e-mail address");
+    myForm.emailid.focus();
+    return false;
+  }
+
+  //validating URL
+  var myForm= document.getElementById('form1');
+  var url = myForm.homepage.value;
+  var pattern = /((ftp|http|https|gopher):\/\/)?((www)\.)?(\w+)(\.)(\w*)(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/i;
+  //var pattern1 = /((ftp|http|https|gopher):\/\/)?((www)\.)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  if (!(pattern.test(url))) {
+    alert("Url is not valid");
+    return false;
+  }
+
 }
 function check_text() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById('form1');
   var form_textarea = myForm.tArea;
   var minLength = form_textarea.value.length;
   if (minLength < 50) {
@@ -43,18 +59,15 @@ function check_text() {
 }
 
 //validating email address
-function valid_email() {
-  var myForm = document.forms[0];
-  var emailadd = myForm.emailid.value;
-  var atpos = emailadd.indexOf('@');
-  var dotpos = emailadd.lastIndexOf('.');
-  if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= emailadd.length) {
-    alert("Not a valid e-mail address");
-    myForm.emailid.focus();
-    myForm.emailid.value = "";
-  }
-}
-
+// function valid_email() {
+//   var myForm = document.getElementById('form1');
+//   var emailadd = myForm.emailid.value;
+//   var pattern = /^(?:\w+\.?)*\w+@(?:\w+\.?)*\w+$/;
+//   if (!(pattern.test(emailadd))) {
+//     alert("Not a valid e-mail address");
+//     myForm.emailid.focus();
+//   }
+// }
 function enable_button(chk_box) {
   var goButton = document.getElementById("button1");
   if(chk_box.checked == true) {
@@ -64,16 +77,14 @@ function enable_button(chk_box) {
     goButton.disabled = true;
   }
 }
-
-
 //validating URL
-function valid_url() {
-  var myForm= document.forms[0];
-  var url = myForm.homepage.value;
- // var url = document.getElementById("url").value;
-  var pattern = /(ftp|http|https|gopher)?:\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-  if (!(pattern.test(url))) {
-    alert("Url is not valid");
-    return false;
-  }
-}
+// function valid_url() {
+//   var myForm= document.getElementById('form1');
+//   var url = myForm.homepage.value;
+//   var pattern = /((ftp|http|https|gopher):\/\/)?((www)\.)?(\w+)(\.)(\w*)(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/i;
+//   //var pattern1 = /((ftp|http|https|gopher):\/\/)?((www)\.)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+//   if (!(pattern.test(url))) {
+//     alert("Url is not valid");
+//     return false;
+//   }
+// }

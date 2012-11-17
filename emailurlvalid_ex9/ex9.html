@@ -6,22 +6,22 @@
   <body onload = "initial()">
 
     <div id = "container">
-      <form accept-charset = "utf-8" onsubmit = "return validation()">
+      <form accept-charset = "utf-8" onsubmit = "return validation()" id = "form1">
 
         <label id = "header">Registration Form</label>
         <dl>
           <dt>Login Name:</dt>
           <dd ><input type ="text" class = "input" name= "loginname"/></dd>
           <dt>Email:</dt>
-          <dd><input type = "text" class = "input1" name = "emailid" onchange = "valid_email()" /></dd>
+          <dd><input type = "text" class = "input1" name = "emailid"/></dd>
           <dt>Name:</dt>
           <dd><input type = "text" class = "input1" name="username"/></dd>
           <dt>Timezone:</dt>
           <dd><select id = "select_box"><option>GMT</option><option></option></select></dd>
           <dt>Home Page:</dt>
-          <dd><input type = "text" class = "input" name = "homepage" onchange = "valid_url()" /> </dd>
+          <dd><input type = "text" class = "input" name = "homepage" /> </dd>
           <dt>About Me</dt><br />
-          <dd><textarea rows = "10" cols = "70" name = "tArea" onchange = "check_text()"></textarea></dd>
+          <dd><textarea rows = "10" cols = "70" name = "tArea"></textarea></dd>
         </dl>
         
         <input type = "checkbox" id = "notify" onclick = "enable_button(this)" /><label id="l1">Receive notification of comments.</label><br /><br />
