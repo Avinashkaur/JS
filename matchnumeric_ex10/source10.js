@@ -15,7 +15,7 @@ function initial() {
   }
 }
 function validate() {
-  var myForm = document.forms[0];
+  var myForm = document.getElementById("form1");
   var textfield1 = document.getElementById("text1");
   var textfield2 = document.getElementById("text2");
   var pattern = /^(\-?\+?\d+(e\+?\-?\d+)?)(\.\d+)?$/;
