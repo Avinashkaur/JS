@@ -6,8 +6,8 @@ function initial() {
 }
 function validation() {
   var myForm = document.getElementById('form1');
-  for (var i = 0; i < document.forms[0].elements.length; i++) {
-    var selected_field = document.forms[0].elements[i];
+  for (var i = 0; i < myForm.length; i++) {
+    var selected_field = myForm.elements[i];
     if (selected_field.type == "text") {
       // console.log(selected_field.name);
       if ((selected_field.value == "") || (selected_field.value == null)) {
