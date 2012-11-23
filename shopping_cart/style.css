@@ -1,0 +1,135 @@
+/*css for index.html*/
+
+* {
+
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  width:1024px;
+  height: 40px;
+  position:relative;
+  margin: 1px auto;
+  background-color: #e5e5e3;
+  border: solid 1px #747462;
+}
+#header ul {
+  list-style-type: none;
+  margin-top: 16px;
+  position:absolute;
+}
+.list_item {
+  float:left;
+  width: 200px;
+}
+.list_item a {
+  text-decoration: none;
+  margin: 2px 4px 1px;
+  padding: 5px 50px;
+  width: 200px;
+  background-color:white;
+  color: #747462;
+  text-align: center;
+  font: Tahoma 15px;
+  border-top: solid 1px #747462;
+  border-left:solid 1px #747462;
+  border-right: solid 1px #747462;
+  border-bottom: none;
+}
+.list_item a:hover {
+  background-color: #e5e5e3;
+  font-weight: bold;
+  margin: 2px 2px 0px;
+  width: 200px;
+  padding: 5px 47px;
+  border-bottom: solid 1px #e5e5e3;
+}
+.content_page {
+  width:1020px;
+  height:auto;
+  margin: 0px auto;
+  position:relative;
+}
+#footer {
+  background-color: #e5e5e3;
+  border: solid 1px #747462;
+  height: 50px;
+  width: 1024px;
+  margin: 0px auto;
+}
+#total_name {
+  float:right;
+  margin: 10px;
+  padding:5px;
+}
+#totalprice {
+  width:100px;
+  height: 30px;
+  float:right;
+  margin: 10px;
+  border: solid 1px #747462;
+}
+#outButton {
+  background-color: #616152;
+  color: white;
+  font: 15px Tahoma;
+  float:right;
+  margin:5px 10px 5px 5px;
+  padding: 5px 15px;
+}
+/*css for products.html*/
+#search_options {
+  background-color: #e5e5e3;
+  padding:2px 5px;
+}
+.labels {
+  font: 15px Tahoma;
+}
+.textboxes {
+  border: solid 1px #747462;
+}
+.buttons , .buttons1 {
+  background-color: white;
+  font: 15px Tahoma;
+  color: #747462;
+  border: solid 1px #747462;
+  padding: 2px 20px;
+
+}
+
+#list {
+  list-style-type: none;
+  margin-top: 2px;
+}
+#items ul li {
+  padding:5px 5px 10px;
+  background-color: #e5e5e3;
+  margin: 2px;
+  height: 40px;
+}
+#cart li, #cartheadings li {
+  list-style-type: none;
+  padding:5px 5px 10px;
+  background-color: #e5e5e3;
+  margin: 2px;
+  height: 40px;
+  width: 1010px;
+
+}
+#label1 {
+  width:450px;
+  float:left;
+}
+#label2 {
+  width:150px;
+  float:left;
+}
+#label3 {
+  width:100px;
+  float:left;
+}
+#label4 {
+  width:150px;
+  float:left;
+}
