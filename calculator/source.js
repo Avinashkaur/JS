@@ -1,10 +1,26 @@
-var number = "";
+var number = "", clear_value = 0;
 var display_screen = document.getElementById('textfield');
+function check_op(sign) {
+  var present_op = "";
+  present_op = display_screen.value.substr((display_screen.value.length-1),display_screen.value.length);
+  if (present_op == '+' || present_op == '-' || present_op == '*' || present_op == '/') {
+    display_screen.value = display_screen.value.replace(present_op,"");
+    display_num(sign);
+  }
+  else {
+    display_num(sign);
+  }
+}
 function display_num(num) {
   try {
-    if ((display_screen.value != "Error") && (display_screen.value != "Infinity")) {
-      display_screen.value = display_screen.value + num;
+    var num_regex = /\d+/;
+    if(clear_value == 1 && num_regex.test(num)) {
+      display_screen.value = "";
+      clear_value = 0;
     }
+    if ((display_screen.value) && (display_screen.value != "Error") && (display_screen.value != "Infinity")) {
+      display_screen.value = display_screen.value + num;
+    } 
     else {
       display_screen.value = num;
     }
@@ -22,6 +38,7 @@ function equals() {
   }
   try {
     display_screen.value = eval(display_screen.value);
+    clear_value = 1;
   }
   catch(exception) {
     display_screen.value = "Error";
@@ -40,7 +57,6 @@ function mem_add() {
     display_screen.value = "";
   }
 }
-
 function mem_subtract() {
   if (number == "") {
     number = number + display_screen.value;
@@ -50,7 +66,6 @@ function mem_subtract() {
     number = number + '-' + '(' + display_screen.value + ')';
     display_screen.value = "";
   }
-  
 }
 function mem_get() {
   display_screen.value = number;

@@ -6,23 +6,23 @@
   <body>
     <div id = "container">
       <form id = "form1" name= "form1">
-      <input type = "text" name = "textfield" id="textfield" autofocus = "autofocus" size = "16" />
+      <input type = "text" name = "textfield" id="textfield" autofocus = "autofocus" size = "16"/>
       <input type = "button" class = "numbers" value = "MC" onclick = "mem_clear()" />
       <input type = "button" class = "numbers" value = "M+" onclick = "mem_add()" />
       <input type = "button" class = "numbers" value = "M-" onclick = "mem_subtract()" />
       <input type = "button" class = "numbers" value = "MR" onclick = "mem_get()" />
       <input type = "button" class = "numbers" value = "C" onclick = "display_num('clear')" />
       <input type = "button" class = "numbers" value = "+-" onclick = "sign()"/>
-      <input type = "button" class = "numbers" value = "/" onclick = "display_num('/')" />
-      <input type = "button" class = "numbers" value = "X" onclick = "display_num('*')"/>
+      <input type = "button" class = "numbers" value = "/" onclick = "check_op('/')" />
+      <input type = "button" class = "numbers" value = "X" onclick = "check_op('*')"/>
       <input type = "button" class = "numbers" value = "7" onclick = "display_num('7')" />
       <input type = "button" class = "numbers" value = "8" onclick = "display_num('8')" />
       <input type = "button" class = "numbers" value = "9" onclick = "display_num('9')"/>
-      <input type = "button" class = "numbers" value = "-" onclick = "display_num('-')" />
+      <input type = "button" class = "numbers" value = "-" onclick = "check_op('-')" />
       <input type = "button" class = "numbers" value = "4" onclick = "display_num('4')"/>
       <input type = "button" class = "numbers" value = "5" onclick = "display_num('5')">
       <input type = "button" class = "numbers" value = "6" onclick = "display_num('6')"/>
-      <input type = "button" class = "numbers" value = "+" id = "add" onclick = "display_num('+')" />
+      <input type = "button" class = "numbers" value = "+" id = "add" onclick = "check_op('+')" />
     
       <input type = "button" class = "numbers" value = "1" onclick = "display_num('1')"/>
       <input type = "button" class = "numbers" value = "2" onclick = "display_num('2')"/>
