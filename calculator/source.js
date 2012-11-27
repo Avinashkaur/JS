@@ -1,6 +1,7 @@
 var number = "", clear_value = 0;
 var display_screen = document.getElementById('textfield');
 function check_op(sign) {
+
   var present_op = "";
   present_op = display_screen.value.substr((display_screen.value.length-1),display_screen.value.length);
   if (present_op == '+' || present_op == '-' || present_op == '*' || present_op == '/') {
@@ -8,6 +9,7 @@ function check_op(sign) {
     display_num(sign);
   }
   else {
+    display_screen.value = eval(display_screen.value);
     display_num(sign);
   }
 }
