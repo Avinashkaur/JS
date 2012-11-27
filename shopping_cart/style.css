@@ -69,6 +69,7 @@
   float:right;
   margin: 10px;
   border: solid 1px #747462;
+  color:black;
 }
 #outButton {
   background-color: #616152;
@@ -78,7 +79,6 @@
   margin:5px 10px 5px 5px;
   padding: 5px 15px;
 }
-/*css for products.html*/
 #search_options {
   background-color: #e5e5e3;
   padding:2px 5px;
@@ -117,19 +117,148 @@
   width: 1010px;
 
 }
-#label1 {
+#productLabel {
   width:450px;
   float:left;
 }
-#label2 {
+#priceLabel {
   width:150px;
   float:left;
 }
-#label3 {
+#quantityLabel {
   width:100px;
   float:left;
 }
-#label4 {
+#subTotalLabel {
   width:150px;
   float:left;
+}
+.imagecell {
+  display:table-cell;
+  width:100px;
+}
+.prod_image {
+  height:100px;
+  display:inline;
+  margin:2px;
+  padding-top:10px;
+  padding-left:10px;
+}
+.infocell {
+  display:table-cell;
+  width:400px;
+  vertical-align:top;
+  paddingTop:10px;
+}
+.caption_label {
+  font:bold 15px Tahoma;
+  padding-top:2px;
+  padding-bottom:2px;
+  margin-left:2px;
+  width:300px;
+}
+.categorylabel {
+  font:15px Tahoma;
+  color:#747462;
+  margin-left:5px;
+  display:block;
+  padding-bottom:2px;
+  padding-top:2px;
+}
+.describe {
+  padding:2px;
+  font:12px Tahoma;
+  text-align:justify;
+  color:#747462;
+  display:block;
+  margin-left:5px;
+}
+.pricelabel {
+  font:bold 15px Tahoma;
+  display:inline;
+  margin-left:5px;
+  padding-top:2px;
+}
+.itemprice {
+  font:bold 15px Tahoma;
+  padding-top:2px;
+  display:inline;
+}
+.quantitycell {
+  display:table-cell;
+  width:100px;
+  vertical-align:top;
+  padding-top:10px;
+  padding-left:20px;
+}
+.quantitybox {
+  border:solid 1px #747462;
+  width:30px;
+}
+.addToCartCell {
+  display:table-cell;
+  vertical-align:top;
+  padding-top:10px;
+  padding-left:10px;
+  width:105px;
+}
+.addToCartButton {
+  background-color:white;
+  font:15px Tahoma;
+  color:#747462;
+  border:solid 1px #747462;
+  padding-top:2px;
+  padding-bottom:2px;
+  width:100px;
+}
+.listitem {
+  padding-top:5px 5px 10px 5px;
+  margin:2px;
+  background-color:#e5e5e3;
+  height:115px;
+  width:1010px;
+  display:table;
+}
+.showProductCell {
+  width:450px;
+  display:table-cell;
+  margin-right:1px;
+  vertical-align:top;
+}
+.showImage {
+  width:50px;
+  height:40px;
+  border:solid 1px #747462;
+  margin:2px;
+}
+.showCaption {
+  width:200px;
+  font:bold 12px Tahoma;
+}
+.showPriceCell {
+  width:150px;
+  display:table-cell;
+}
+.showQuantityCell {
+  display:table-cell;
+  margin-left:1px;
+  width:100px;
+}
+.showQuantity {
+  width:50px;
+}
+.showSubtotalCell {
+  display:table-cell;
+  margin-left:1px;
+  width:150px;
+}
+.removeButtonCell {
+  display:table-cell;
+  margin-left:1px;
+}
+.showListItem {
+  width:1010px;
+  background-color:#e5e5e3;
+  margin-top:2px;
+  display:table;
 }
