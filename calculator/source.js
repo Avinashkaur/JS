@@ -1,15 +1,17 @@
 var number = "", clear_value = 0;
 var display_screen = document.getElementById('textfield');
+display_screen.disabled = true;
 function check_op(sign) {
-
   var present_op = "";
   present_op = display_screen.value.substr((display_screen.value.length-1),display_screen.value.length);
   if (present_op == '+' || present_op == '-' || present_op == '*' || present_op == '/') {
     display_screen.value = display_screen.value.replace(present_op,"");
     display_num(sign);
+    clear_value = 0;
   }
   else {
     display_screen.value = eval(display_screen.value);
+    clear_value = 0;
     display_num(sign);
   }
 }
